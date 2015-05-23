@@ -1,0 +1,144 @@
+/* This is a CSS comment.*/
+
+/*
+Comments are only to help PEOPLE read a code file. The
+computer ignores them.
+#template
+{
+  width:none;
+  height:none;
+  text-align:none;
+  color:none;
+  padding:none;
+  border:none;
+  margin:none;
+}
+*/
+* 
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+} 
+/*Define center big box*/
+div.whole
+{
+  max-width: 1000px;
+  min-height: 100vh;
+  min-width: 500px;
+  padding: 5px 0px 5px 0px;
+  margin: 10px 10% 10px 10%;
+  background-color: #C5CAE9;
+}
+/*Define title box*/
+div.title
+{
+  height: 100%;
+  text-align: center;
+  background-color: #1A237E;
+  padding: 5px 0px 5px 0px;
+  border-radius: 20px;
+  margin: 10px;
+}
+/*Define table of content left box*/
+div.toc
+{
+  background-color: #E91E63;
+  color: white;
+  width:200px;
+  padding-right: 10px;
+  margin: 0px 10px 0px 10px;
+  border-radius: 5px;
+  float:left;
+}
+/*Define main content container box*/
+div.container
+{
+  background-color: #3F51B5;
+  color:rgb(232, 232, 232);
+  padding: 10px 10px 5px 10px;
+  border-radius: 5px;
+  margin: 0px 10px 0px 220px;
+}
+/*Define content box (composed of header, subheaders and contents)*/
+div.contentbox
+{
+  background-color: #E8EAF6;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color:black;
+}
+/*Define header box inside content box*/
+div.header
+{
+  font-family: arial;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 10px 0px 10px 0px;
+}
+/*Define subheader box inside content box*/
+div.subheader
+{
+  font-family: arial;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0px 10px 5px;
+}
+/*Define content inside content box*/
+div.content
+{
+  margin-left:10px;
+}
+/*h1 - for document title*/
+h1 {
+  font-family: arial;
+  color: white;
+  font-size: 50px;
+}
+
+/*******************
+[START] Change link colors
+*******************/
+  a{
+  	color: white;
+  }
+  /* unvisited link */
+  a:link {
+      text-decoration: none;
+  }
+
+  /* mouse over link */
+  a:hover {
+      text-decoration: underline;
+  }
+
+  a.content{
+	color: #304FFE;
+  }
+    /* unvisited link */
+  a.content:link {
+      text-decoration: none;
+  }
+
+  /* mouse over link */
+  a.content:hover {
+      text-decoration: underline;
+  }
+/*******************
+[END] Change link colors
+*******************/
+
+/*highlight color*/
+.highlight
+{
+  color:red;
+}
+/*body style that applies to all contents*/
+body
+{
+  font-family: helvetica;
+  line-height: 1.5;
+}
