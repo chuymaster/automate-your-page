@@ -6,7 +6,7 @@
 ### Pre-defined Strings ###
 ###---------------------###
 
-# HEADER_STRING String
+# Header String
 HEADER_STRING = """<!DOCTYPE html>
 <!-- This is an HTML comment -->
 <html>
@@ -19,12 +19,12 @@ HEADER_STRING = """<!DOCTYPE html>
     <div class="title">
         <h1>Important Concepts</h1>
     </div>"""
-# FOOTER_STRING String
+# Footer String
 FOOTER_STRING = """</div>
 </body>
 </html>"""
 
-# Concepts [Lesson Index, HEADER_STRING Index, Title, [Content Paragraph n, Concent Paragraph n+1,...]]
+# Concepts [Lesson Index, Header Index, Title, [Content Paragraph n, Concent Paragraph n+1,...]]
 CONCEPT_LIST = [
 [1,'1-1','Computer Language',["""Computer languages are different to Natural languages (E.g. English). Because natural languages have <em class="highlight">Ambiguity</em> and <em class="highlight">Verbosity</em> that will change the meanings of words based on the context. These 2 natures of natural languages can lead listeners to misunderstanding. If stupid computer listens to natural language, it will interpret wrongly and may launch a nuclear missile even though we order it to make a webpage."""]]
 ,[1,'1-2', 'Python',["""Python is a computer language. It has <em class="highlight">Grammar</em> where codes written in Python must match with. If the code has wrong grammar, a program will not run.""" ,"""Python has it's expressions. Every statement must be composed of <em class="highlight">Expression</em> + <em class="highlight">Operator</em> + <em class="highlight">Expression</em>. For example, 1 + 1 is ok but 1 1 is not."""]]
@@ -45,10 +45,10 @@ LESSON_LIST = ['Lesson 1: Introduction to "Serious" Programming'
            ,'Lesson 4: Control&Flow: If and While'
            ,'Lesson 5: Structured Data: List'
            ,'Lesson 6: How to solve the problem']
-# TAB_STRING String
+# Tab String
 TAB_STRING = '    '
 
-# NEWLINE_STRING String
+# Newline String
 NEWLINE_STRING = """
 """
 
@@ -64,7 +64,7 @@ def create_table_of_contents(concepts):
     while i < len(concepts):
         concept = concepts[i]
         
-	#Test if this concept is in the same HEADER_STRING group as the previous. if not, create HEADER_STRING link.
+	#Test if this concept is in the same header group as the previous. if not, create header link.
         if concepts[i][0] != concepts[i-1][0]:
             toc += TAB_STRING + '<li>' + NEWLINE_STRING
             toc += TAB_STRING + TAB_STRING + '<a href="#lesson-' + str(concept[0]) + '">' + LESSON_LIST[concept[0] - 1] + '</a>' + NEWLINE_STRING
@@ -73,7 +73,7 @@ def create_table_of_contents(concepts):
 	# Put in the concept title
         toc += TAB_STRING + TAB_STRING + TAB_STRING + '<li><a href="#lesson-' + concept[1] + '">' + concept[2] + '</a></li>' + NEWLINE_STRING
         
-	#Test if the next concept is in the same HEADER_STRING group as this one. If not, put the end </ul></li> tag.
+	#Test if the next concept is in the same header group as this one. If not, put the end </ul></li> tag.
         if i == len(concepts) - 1 or concepts[i][0] != concepts[i+1][0]:
             toc += TAB_STRING + TAB_STRING + '</ul>' + NEWLINE_STRING
             toc += TAB_STRING + '</li>' + NEWLINE_STRING
